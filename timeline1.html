@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jQuery的横向和纵向的时间轴幻灯片</title>
+
+    <link rel="stylesheet" href="css/style-time.css" type="text/css" media="screen" />
+
+    <script src="js/jquery-1.6.2.min.js" type="text/javascript"></script>
+    <script src="js/jquery.timelinr-0.9.3.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function() {
+            $().timelinr()
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <h1><span style="font-size:20px">父母成长经历时间线</span></h1>
+
+    <div id="timeline">
+        <ul id="dates">
+            <li><a href="#">出生</a></li>
+            <li><a href="#">成长</a></li>
+            <li><a href="#">教育</a></li>
+            <li><a href="#">经历</a></li>
+            <li><a href="#">结婚</a></li>
+        </ul>
+        <ul id="issues">
+            <li id="#1900">
+                <img src="images/baby1.png" width="150" height="150" />
+
+                <p style="font-size:20px; text-align:center"><b>出生</b></p>
+                <p>&nbsp;</p>
+                <p>这一代的父母多出生于上世纪五、六十年代，这时候的中国正处于农业社会为主，向工业社会转型的特殊时期</p>
+            </li>
+            <li id="#1930">
+                <img src="images/child1.png" width="150" height="150" />
+
+                <p style="font-size:20px; text-align:center"><b>成长</b></p>
+                <p>&nbsp;</p>
+                <p>这一代的父母成长于信息相对封闭的环境，很难接触到国外的思想或观念</p>
+            </li>
+            <li id="#1944">
+                <img src="images/teen1.png" width="150" height="150" />
+
+                <p style="font-size:20px; text-align:center"><b>教育</b></p>
+                <p>&nbsp;</p>
+                <p>这一代的父母接受的教育相对并不完善也并不健全，他们中只有少数接受过高等教育</p>
+            </li>
+            <li id="#1950">
+                <img src="images/adult1.png" width="150" height="150" />
+
+                <p style="font-size:20px; text-align:center"><b>经历</b></p>
+                <p>&nbsp;</p>
+                <p>这一代的父母大多当过知青，有过上山下乡的经历，且他们中的一些人，由于缺乏感情经验，在农村结婚后就留在了农村，很难回到城市里</p>
+            </li>
+            <li id="#1971">
+                <img src="images/marriage1.png" width="150" height="150" />
+
+                <p style="font-size:20px; text-align:center"><b>结婚</b></p>
+                <p>&nbsp;</p>
+                <p>这一代父母多秉持传统的婚姻观念，且对于“父母之命，媒妁之言”也相对较能接受</p>
+            </li>
+        </ul>
+        <div id="grad_left"></div>
+        <div id="grad_right"></div>
+        <a href="#" id="next">+</a>
+        <a href="#" id="prev">-</a>
+    </div>
+
+</body>
+
+</html>

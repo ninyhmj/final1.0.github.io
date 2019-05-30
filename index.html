@@ -1,0 +1,2114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        
+        body,
+        html {
+            height: 100%;
+        }
+        
+        body,
+        html {
+            font-family: "Microsoft YaHei", "微软雅黑", Candara, Tahoma, SimSun !important;
+            font-size: 16px;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            text-align: left;
+            color: #1a1a1a;
+            font-weight: 400;
+        }
+    </style>
+
+    <!--主要样式-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/book.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/book.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <!-- 引入 echarts.js -->
+    <script src="echarts.min.js"></script>
+    <script type="text/javascript" src="echarts.js"></script>
+    <script type="text/javascript" src="china.js"></script>
+
+    <title>单身有罪，结婚无罪？</title>
+    <style>
+        .top {
+            width: 1366px;
+            height: 600px;
+        }
+        
+        .word {
+            width: 700px;
+            height: auto;
+            text-align: left;
+            text-align: justify;
+            margin: 50px auto;
+            font-size: 16px;
+        }
+        
+        .container {
+            width: 1200px;
+            height: auto;
+        }
+        
+        .box1 {
+            width: 800px;
+            height: auto;
+            margin: 10px;
+            border: 10px;
+        }
+        
+        .word1 {
+            width: 800px;
+            height: auto;
+            text-align: left;
+            font-size: 16px;
+        }
+        
+        .box2 {
+            width: 800px;
+            height: auto;
+            margin: 10px;
+            border: 10px;
+        }
+        
+        .laiyuan {
+            width: 550px;
+            height: auto;
+            font-size: 10px;
+            text-align: center;
+        }
+        
+        .guodu2 {
+            width: 1366px;
+            height: auto;
+            text-align: center;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top" style="background-image:url(images/top.jpg)"></div>
+
+    <center>
+        <div class="word">
+            <p style="font-size:16px">根据民政部数据，截止到2018年，中国的单身人口近2亿人次，其中适婚单身青年“被逼婚”比率高达86%,这意味着几乎每一个中国单身青年或多或少都曾被逼婚过。面对逼婚的压力，当今单身青年会作何反应？为何当下单身现象会成为一种社会问题？</p>
+            <p>&nbsp;</p>
+            <h2 style="height:20px; text-align:center;"><b>--第四次单身浪潮来袭--</b></h2>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p style="font-size:16px">目前，中国有近2亿人单身，相当于总人口的七分之一，第四次单身浪潮来袭。与前三次单身浪潮不同的是，本次浪潮不是由于离婚率升高导致，而是由于当下青年更多的主动选择了单身。</p>
+        </div>
+    </center>
+
+    <section>
+        <center>
+            <div class="container">
+                <div class="box1">
+                    <div style="height:20px; font-size:16px; text-align:center;margin-top:10px;"><b>各年龄段单身人口比例</b></div>
+                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                    <div id="1main" style="width: 710px;height:500px;"></div>
+                    <script type="text/javascript">
+                        // 基于准备好的dom，初始化echarts实例
+                        var myChart = echarts.init(document.getElementById('1main'));
+
+                        // 指定图表的配置项和数据                var myChart = echarts.init(document.getElementById('2main'));
+
+                        // 指定图表的配置项和数据
+
+                        var hours = ['25-29', '3', '4', '30-34', '5', '6', '35-39', '9', '10', '40-44', '11', '12', '45-49', '13', '14', '50-54', '15', '16',
+                            '55-59', '17', '18', '60-64', '20', '21', '>65'
+                        ];
+                        var days = ['2016', '2015', '2014',
+                            '2013', '2012'
+                        ];
+
+                        var data = [
+                            [0, 0, 34],
+                            [0, 1, 0],
+                            [0, 2, 0],
+                            [0, 3, 11],
+                            [0, 4, 0],
+                            [0, 5, 0],
+                            [0, 6, 5],
+                            [0, 7, 0],
+                            [0, 8, 0],
+                            [0, 9, 3],
+                            [0, 10, 0],
+                            [0, 11, 0],
+                            [0, 12, 2],
+                            [0, 13, 0],
+                            [0, 14, 0],
+                            [0, 15, 1],
+                            [0, 16, 0],
+                            [0, 17, 0],
+                            [0, 18, 1],
+                            [0, 19, 0],
+                            [0, 20, 0],
+                            [0, 21, 1],
+                            [0, 22, 0],
+                            [0, 23, 0],
+                            [0, 24, 1],
+                            [1, 0, 35],
+                            [1, 1, 0],
+                            [1, 2, 0],
+                            [1, 3, 11],
+                            [1, 4, 0],
+                            [1, 5, 0],
+                            [1, 6, 4],
+                            [1, 7, 0],
+                            [1, 8, 0],
+                            [1, 9, 3],
+                            [1, 10, 0],
+                            [1, 11, 0],
+                            [1, 12, 2],
+                            [1, 13, 0],
+                            [1, 14, 0],
+                            [1, 15, 1],
+                            [1, 16, 0],
+                            [1, 17, 0],
+                            [1, 18, 1],
+                            [1, 19, 0],
+                            [1, 20, 0],
+                            [1, 21, 2],
+                            [1, 22, 0],
+                            [1, 23, 0],
+                            [1, 24, 1],
+                            [2, 0, 32],
+                            [2, 1, 0],
+                            [2, 2, 0],
+                            [2, 3, 11],
+                            [2, 4, 0],
+                            [2, 5, 0],
+                            [2, 6, 4],
+                            [2, 7, 0],
+                            [2, 8, 0],
+                            [2, 9, 3],
+                            [2, 10, 0],
+                            [2, 11, 0],
+                            [2, 12, 2],
+                            [2, 13, 0],
+                            [2, 14, 0],
+                            [2, 15, 1],
+                            [2, 16, 0],
+                            [2, 17, 0],
+                            [2, 18, 2],
+                            [2, 19, 0],
+                            [2, 20, 0],
+                            [2, 21, 2],
+                            [2, 22, 0],
+                            [2, 23, 0],
+                            [2, 24, 1],
+                            [3, 0, 32],
+                            [3, 1, 0],
+                            [3, 2, 0],
+                            [3, 3, 10],
+                            [3, 4, 0],
+                            [3, 5, 0],
+                            [3, 6, 4],
+                            [3, 7, 0],
+                            [3, 8, 0],
+                            [3, 9, 3],
+                            [3, 10, 0],
+                            [3, 11, 0],
+                            [3, 12, 2],
+                            [3, 13, 0],
+                            [3, 14, 0],
+                            [3, 15, 1],
+                            [3, 16, 0],
+                            [3, 17, 0],
+                            [3, 18, 2],
+                            [3, 19, 0],
+                            [3, 20, 0],
+                            [3, 21, 2],
+                            [3, 22, 0],
+                            [3, 23, 0],
+                            [3, 24, 1],
+                            [4, 0, 29],
+                            [4, 1, 0],
+                            [4, 2, 0],
+                            [4, 3, 9],
+                            [4, 4, 0],
+                            [4, 5, 0],
+                            [4, 6, 4],
+                            [4, 7, 0],
+                            [4, 8, 0],
+                            [4, 9, 2],
+                            [4, 10, 0],
+                            [4, 11, 0],
+                            [4, 12, 2],
+                            [4, 13, 0],
+                            [4, 14, 0],
+                            [4, 15, 1],
+                            [4, 16, 0],
+                            [4, 17, 0],
+                            [4, 18, 2],
+                            [4, 19, 0],
+                            [4, 20, 0],
+                            [4, 21, 2],
+                            [4, 22, ],
+                            [4, 23, 0],
+                            [4, 24, 1]
+                        ];
+
+                        var option = {
+                            title: {
+                                subtext: '(2013-2017《中国统计年鉴》)'
+                            },
+                            tooltip: {
+                                position: 'bottom'
+                            },
+                            title: [],
+                            singleAxis: [],
+                            series: []
+                        };
+
+                        echarts.util.each(days, function(day, idx) {
+                            option.title.push({
+                                textBaseline: 'middle',
+                                top: (idx + 1) * 100 / 7 + '%',
+                                text: day
+                            });
+                            option.singleAxis.push({
+                                left: 150,
+                                type: 'category',
+                                boundaryGap: false,
+                                data: hours,
+                                top: (idx * 100 / 7 + 9) + '%',
+                                height: (100 / 7 - 5) + '%',
+                                axisLabel: {
+                                    interval: 2
+                                }
+                            });
+                            option.series.push({
+                                singleAxisIndex: idx,
+                                coordinateSystem: 'singleAxis',
+                                type: 'scatter',
+                                data: [],
+                                symbolSize: function(dataItem) {
+                                    return dataItem[1] * 4;
+                                }
+                            });
+                        });
+
+                        echarts.util.each(data, function(dataItem) {
+                            option.series[dataItem[0]].data.push([dataItem[1], dataItem[2]]);
+                        });
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption(option);
+                    </script>
+                    <div class="laiyuan"> 数据来源:2013-2017《中国统计年鉴》 采集时间：2013-2017年
+                    </div>
+                </div>
+            </div>
+            </div>
+        </center>
+
+
+        <center>
+            <div class="word">
+                <p style="font-size:16px">在我国2亿单身人口中，25-39岁单身人口占各年龄段的比例逐年上升，其中，25-29岁单身人口占比最大，从2012年的约29%，变为2016年的超过34%。 而40岁以后单身比例占其年龄段比例很小且变化不大。</p>
+
+        </center>
+
+
+
+        <center>
+            <div id="main" style="width: 700px;height:400px;">
+                <script type="text/javascript">
+                    // 基于准备好的dom，初始化echarts实例
+                    var myChart = echarts.init(document.getElementById('main'));
+
+                    // 指定图表的配置项和数据                var myChart = echarts.init(document.getElementById('2main'));
+
+                    // 指定图表的配置项和数据
+
+                    var dataMap = {};
+
+                    function dataFormatter(obj) {
+                        var pList = ['城市', '镇', '乡村', '全国'];
+                        var temp;
+                        for (var year = 2012; year <= 2016; year++) {
+                            var max = 0;
+                            var sum = 0;
+                            temp = obj[year];
+                            for (var i = 0, l = temp.length; i < l; i++) {
+                                max = Math.max(max, temp[i]);
+                                sum += temp[i];
+                                obj[year][i] = {
+                                    name: pList[i],
+                                    value: temp[i]
+                                }
+                            }
+                            obj[year + 'max'] = Math.floor(max / 100) * 100;
+                            obj[year + 'sum'] = sum;
+                        }
+                        return obj;
+                    }
+
+                    dataMap.dataGDP = dataFormatter({
+                        //max : 200000000,
+                        2016: [47759856.63, 28129032.26, 53125448.03, 129013142.2],
+                        2015: [49458387.1, 28998838.71, 54441806.45, 132899032.3],
+                        2014: [50220194.65, 26974452.55, 55114355.23, 133525547.4],
+                        2013: [48635036.5, 29739659.37, 57343065.69, 135718978.1],
+                        2012: [46243080.63, 29599277.98, 58090252.71, 133932611.3]
+                    });
+
+                    dataMap.dataPI = dataFormatter({
+                        //max : 200000000,
+                        2016: [36657108.72, 19568697.73, 32882915.17, 101056152.9],
+                        2015: [39945290.32, 19262193.55, 33416903.23, 92624387.1],
+                        2014: [36343065.69, 21995133.82, 33062043.8, 91401459.85],
+                        2013: [38311435.52, 20760340.63, 34781021.9, 93852798.05],
+                        2012: [38286401.93, 20643802.65, 37886883.27, 37886883.27]
+                    });
+
+
+                    option = {
+                        baseOption: {
+                            timeline: {
+                                // y: 0,
+                                axisType: 'category',
+                                // realtime: false,
+                                // loop: false,
+                                autoPlay: true,
+                                // currentIndex: 2,
+                                playInterval: 1000,
+                                // controlStyle: {
+                                //     position: 'left'
+                                // },
+                                data: [
+                                    '2012', '2013', '2014', '2015', '2016',
+                                ],
+
+                                label: {
+                                    formatter: function(s) {
+                                        return (new Date(s)).getFullYear();
+                                    }
+                                }
+                            },
+                            title: {
+
+                            },
+                            tooltip: {},
+                            legend: {
+                                x: 'right',
+                                data: ['男', '女'],
+
+                            },
+                            calculable: true,
+                            grid: {
+                                top: 100,
+                                bottom: 100
+                            },
+                            xAxis: [{
+                                'type': 'category',
+                                'axisLabel': {
+                                    'interval': 0
+                                },
+                                'data': [
+                                    '城市', '镇', '乡村', '全国'
+                                ],
+                                splitLine: {
+                                    show: false
+                                }
+                            }],
+                            yAxis: [{
+                                type: 'value',
+                                name: '单身人数（人）',
+                                // max: 53500
+                                max: 150000000
+                            }],
+                            series: [{
+                                name: '男',
+                                type: 'bar'
+                            }, {
+                                name: '女',
+                                type: 'bar'
+                            }, {
+                                name: '男女占比',
+                                type: 'pie',
+                                center: ['30%', '35%'],
+                                radius: '28%'
+                            }]
+                        },
+                        options: [{
+                            title: {
+                                text: '2012年城、镇、乡村单身人数对比',
+                                left: 'center',
+                            },
+                            series: [{
+                                data: dataMap.dataGDP['2012']
+                            }, {
+                                data: dataMap.dataPI['2012']
+                            }, {
+                                data: [{
+                                    name: '男',
+                                    value: dataMap.dataGDP['2012sum']
+                                }, {
+                                    name: '女',
+                                    value: dataMap.dataPI['2012sum']
+                                }, ]
+                            }]
+                        }, {
+                            title: {
+                                text: '2013年城、镇、乡村单身人数对比'
+                            },
+                            series: [{
+                                data: dataMap.dataGDP['2013']
+                            }, {
+                                data: dataMap.dataPI['2013']
+                            }, {
+                                data: [{
+                                    name: '男',
+                                    value: dataMap.dataGDP['2013sum']
+                                }, {
+                                    name: '女',
+                                    value: dataMap.dataPI['2013sum']
+                                }, ]
+                            }]
+                        }, {
+                            title: {
+                                text: '2014年城、镇、乡村单身人数对比',
+                                left: 'center',
+                            },
+                            series: [{
+                                data: dataMap.dataGDP['2014']
+                            }, {
+                                data: dataMap.dataPI['2014']
+                            }, {
+                                data: [{
+                                    name: '男',
+                                    value: dataMap.dataGDP['2014sum']
+                                }, {
+                                    name: '女',
+                                    value: dataMap.dataPI['2014sum']
+                                }, ]
+                            }]
+                        }, {
+                            title: {
+                                text: '2015年城、镇、乡村单身人数对比'
+                            },
+                            series: [{
+                                data: dataMap.dataGDP['2015']
+                            }, {
+                                data: dataMap.dataPI['2015']
+                            }, {
+                                data: [{
+                                    name: '男',
+                                    value: dataMap.dataGDP['2015sum']
+                                }, {
+                                    name: '女',
+                                    value: dataMap.dataPI['2015sum']
+                                }, ]
+                            }]
+                        }, {
+                            title: {
+                                text: '2016年城、镇、乡村单身人数对比'
+                            },
+                            series: [{
+                                data: dataMap.dataGDP['2016']
+                            }, {
+                                data: dataMap.dataPI['2016']
+                            }, {
+                                data: [{
+                                    name: '男',
+                                    value: dataMap.dataGDP['2016sum']
+                                }, {
+                                    name: '女',
+                                    value: dataMap.dataPI['2016sum']
+                                }, ]
+                            }]
+                        }]
+                    };
+                    // 使用刚指定的配置项和数据显示图表。
+                    myChart.setOption(option);
+                </script>
+                <div class="laiyuan"> 数据来源:2013-2017《中国人口和就业统计年鉴》、《中国统计年鉴》 采集时间：2013-2017年
+                </div>
+        </center>
+
+
+
+        <center>
+            <div class="word">
+                <p style="font-size:16px">从图中，我们可以看出，目前中国整体上的适婚年龄的男性总人口比女性多了约3500万，不论是从城市、乡村还是镇来说，单身男性的数量都高于单身女性的数量，男女比例严重失调。事实上，广大男性事实上只能单身。另一方面，城市里的广大高素质高学历的女性因为择偶标准的提高而单身，这也使得适婚年龄的单身群体不断扩大。</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <h2 style="height:20px; text-align:center;"><b>--全国青年普遍面临逼婚压力--</b></h2>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p style="font-size:16px"> 在中国，婚姻自古以来就从来不是两个人的事，它之所以被称为“人生大事”就在于它牵动的是每一位父母的心。</p>
+                <p>&nbsp;</p>
+                <p style="font-size:16px"> “到了年龄就应该结婚，一代接着一代。可是现在的孩子们好像都不太在乎自己的个人大事。实在被我们父母逼的受不了了，才相个亲，敷衍一下，搞的我们做父母的十分着急。”年过六旬的吴阿姨在一个相亲大会上这么说。这种替孩子着急也许还只是比较温和的做法，有的父母却将这种急切一种更极端的方式表现出来：</p>
+                <p>&nbsp;</p>
+                <p style="font-size:16px">在重庆，一位单身青年冉先生在朋友圈晒出母亲以逝去的外公为要挟，逼他早点结婚。</p>
+                <p style="font-size:16px">在陕西，31岁的男子遭逼婚，父母到他开的餐饮连锁店里堵门砸店。</p>
+                <p style="font-size:16px">在长沙，一位28岁的刘小姐，母亲花了1380元在网上买了颗桃树，想让女儿走桃花运。</p>
+                <p style="font-size:16px">在上海，以为35岁的单身青年被父母逼婚逼到跳楼... ...</p>
+                <p>&nbsp;</p>
+                <p style="font-size:16px">无论父母的做法温和与否，这些方式都指向了一个词——逼婚。而今年2月，据中国关心下一代工作委员会健康体育发展中心发布的《中国逼婚现状调查报告》显示：逾七成的受访者曾被父母逼婚，女性被逼婚率比男性高6％。甚至有3％的青年，还未到法定结婚年龄，就被父母逼婚了。由此可见，“逼婚正当时”，它正在由家事演变成为一种社会现象。</p>
+            </div>
+        </center>
+
+        <center>
+            <div class="container">
+                <div class="box2">
+                    <div style="height:20px; font-size:16px; text-align:center;margin-top:10px;"><b>2016年全国各省单身率与逼婚率情况</b></div>
+                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                    <div id="main4" style="width: 710px;height:500px;margin:auto;"></div>
+                    <script type="text/javascript">
+                        // 基于准备好的dom，初始化echarts实例
+                        var myChart = echarts.init(document.getElementById('main4'));
+                        var name_title = ""
+                        var subname = ''
+                        var nameColor = " rgb(55, 75, 113)"
+                        var name_fontFamily = '等线'
+                        var subname_fontSize = 15
+                        var name_fontSize = 18
+                        var mapName = 'china'
+                        var data = [{
+                            name: "北京",
+                            value: 5
+                        }, {
+                            name: "天津",
+                            value: 50
+                        }, {
+                            name: "河北",
+                            value: 30
+                        }, {
+                            name: "山西",
+                            value: 50
+                        }, {
+                            name: "内蒙古",
+                            value: 50
+                        }, {
+                            name: "辽宁",
+                            value: 5
+                        }, {
+                            name: "吉林",
+                            value: 50
+                        }, {
+                            name: "黑龙江",
+                            value: 50
+                        }, {
+                            name: "上海",
+                            value: 5
+                        }, {
+                            name: "江苏",
+                            value: 5
+                        }, {
+                            name: "浙江",
+                            value: 5
+                        }, {
+                            name: "安徽",
+                            value: 140
+                        }, {
+                            name: "福建",
+                            value: 50
+                        }, {
+                            name: "江西",
+                            value: 50
+                        }, {
+                            name: "山东",
+                            value: 170
+                        }, {
+                            name: "河南",
+                            value: 200
+                        }, {
+                            name: "湖北",
+                            value: 140
+                        }, {
+                            name: "湖南",
+                            value: 30
+                        }, {
+                            name: "重庆",
+                            value: 50
+                        }, {
+                            name: "四川",
+                            value: 170
+                        }, {
+                            name: "贵州",
+                            value: 50
+                        }, {
+                            name: "云南",
+                            value: 50
+                        }, {
+                            name: "西藏",
+                            value: 50
+                        }, {
+                            name: "陕西",
+                            value: 50
+                        }, {
+                            name: "甘肃",
+                            value: 50
+                        }, {
+                            name: "青海",
+                            value: 50
+                        }, {
+                            name: "宁夏",
+                            value: 50
+                        }, {
+                            name: "新疆",
+                            value: 50
+                        }, {
+                            name: "广东",
+                            value: 170
+                        }, {
+                            name: "广西",
+                            value: 30
+                        }, {
+                            name: "海南",
+                            value: 50
+                        }, ];
+
+                        var geoCoordMap = {};
+                        var toolTipData = [{
+                            name: "北京",
+                            value: [{
+                                name: "逼婚率",
+                                value: "72 %"
+                            }, {
+                                name: "单身率",
+                                value: "21.25%"
+                            }]
+                        }, {
+                            name: "天津",
+                            value: [{
+                                name: "逼婚率",
+                                value: "78%"
+                            }, {
+                                name: "单身率",
+                                value: "19.13%"
+                            }]
+                        }, {
+                            name: "河北",
+                            value: [{
+                                name: "逼婚率",
+                                value: "77%"
+                            }, {
+                                name: "单身率",
+                                value: "14.46%"
+                            }]
+                        }, {
+                            name: "山西",
+                            value: [{
+                                name: "逼婚率",
+                                value: "78%"
+                            }, {
+                                name: "单身率",
+                                value: "20.36%"
+                            }]
+                        }, {
+                            name: "内蒙古",
+                            value: [{
+                                name: "逼婚率",
+                                value: "78%"
+                            }, {
+                                name: "单身率",
+                                value: "18.53%"
+                            }]
+                        }, {
+                            name: "辽宁",
+                            value: [{
+                                name: "逼婚率",
+                                value: "74%"
+                            }, {
+                                name: "单身率",
+                                value: "16.34%"
+                            }]
+                        }, {
+                            name: "吉林",
+                            value: [{
+                                name: "逼婚率",
+                                value: "80%"
+                            }, {
+                                name: "单身率",
+                                value: "14.67%"
+                            }]
+                        }, {
+                            name: "黑龙江",
+                            value: [{
+                                name: "逼婚率",
+                                value: "78%"
+                            }, {
+                                name: "单身率",
+                                value: "16.71%"
+                            }]
+                        }, {
+                            name: "上海",
+                            value: [{
+                                name: "逼婚率",
+                                value: "75%"
+                            }, {
+                                name: "单身率",
+                                value: "17.02"
+                            }]
+                        }, {
+                            name: "江苏",
+                            value: [{
+                                name: "逼婚率",
+                                value: "74%"
+                            }, {
+                                name: "单身率",
+                                value: "15.68%"
+                            }]
+                        }, {
+                            name: "浙江",
+                            value: [{
+                                name: "逼婚率",
+                                value: "74%"
+                            }, {
+                                name: "单身率",
+                                value: "17.12%"
+                            }]
+                        }, {
+                            name: "安徽",
+                            value: [{
+                                name: "逼婚率",
+                                value: "79%"
+                            }, {
+                                name: "单身率",
+                                value: "17.63%"
+                            }]
+                        }, {
+                            name: "福建",
+                            value: [{
+                                name: "逼婚率",
+                                value: "78%"
+                            }, {
+                                name: "单身率",
+                                value: "15.86%"
+                            }]
+                        }, {
+                            name: "江西",
+                            value: [{
+                                name: "逼婚率",
+                                value: "78%"
+                            }, {
+                                name: "单身率",
+                                value: "19.18%"
+                            }]
+                        }, {
+                            name: "山东",
+                            value: [{
+                                name: "逼婚率",
+                                value: "85%"
+                            }, {
+                                name: "单身率",
+                                value: "15.34%"
+                            }]
+                        }, {
+                            name: "河南",
+                            value: [{
+                                name: "逼婚率",
+                                value: "89%"
+                            }, {
+                                name: "单身率",
+                                value: "19.15%"
+                            }]
+                        }, {
+                            name: "湖北",
+                            value: [{
+                                name: "逼婚率",
+                                value: "79%"
+                            }, {
+                                name: "单身率",
+                                value: "18.89%"
+                            }]
+                        }, {
+                            name: "湖南",
+                            value: [{
+                                name: "逼婚率",
+                                value: "77%"
+                            }, {
+                                name: "单身率",
+                                value: "17.39%"
+                            }]
+                        }, {
+                            name: "重庆",
+                            value: [{
+                                name: "逼婚率",
+                                value: "78%"
+                            }, {
+                                name: "未婚率",
+                                value: "17.12%"
+                            }]
+                        }, {
+                            name: "四川",
+                            value: [{
+                                name: "逼婚率",
+                                value: "88%"
+                            }, {
+                                name: "单身率",
+                                value: "18.13%"
+                            }]
+                        }, {
+                            name: "贵州",
+                            value: [{
+                                name: "逼婚率",
+                                value: "78%"
+                            }, {
+                                name: "单身率",
+                                value: "22.02%"
+                            }]
+                        }, {
+                            name: "云南",
+                            value: [{
+                                name: "逼婚率",
+                                value: "78%"
+                            }, {
+                                name: "单身率",
+                                value: "21.87%"
+                            }]
+                        }, {
+                            name: "西藏",
+                            value: [{
+                                name: "逼婚率",
+                                value: "78%"
+                            }, {
+                                name: "单身率",
+                                value: "30.63%"
+                            }]
+                        }, {
+                            name: "陕西",
+                            value: [{
+                                name: "逼婚率",
+                                value: "78%"
+                            }, {
+                                name: "单身率",
+                                value: "21.45%"
+                            }]
+                        }, {
+                            name: "甘肃",
+                            value: [{
+                                name: "逼婚率",
+                                value: "78%"
+                            }, {
+                                name: "单身率",
+                                value: "20.84%"
+                            }]
+                        }, {
+                            name: "青海",
+                            value: [{
+                                name: "逼婚率",
+                                value: "78%"
+                            }, {
+                                name: "单身率",
+                                value: "21.38%"
+                            }]
+                        }, {
+                            name: "宁夏",
+                            value: [{
+                                name: "逼婚率",
+                                value: "78%"
+                            }, {
+                                name: "单身率",
+                                value: "19.41%"
+                            }]
+                        }, {
+                            name: "新疆",
+                            value: [{
+                                name: "逼婚率",
+                                value: "78%"
+                            }, {
+                                name: "单身率",
+                                value: "19.48%"
+                            }]
+                        }, {
+                            name: "广东",
+                            value: [{
+                                name: "逼婚率",
+                                value: "80%"
+                            }, {
+                                name: "单身率",
+                                value: "28%"
+                            }]
+                        }, {
+                            name: "广西",
+                            value: [{
+                                name: "逼婚率",
+                                value: "77%"
+                            }, {
+                                name: "单身率",
+                                value: "23.23%"
+                            }]
+                        }, {
+                            name: "海南",
+                            value: [{
+                                name: "逼婚率",
+                                value: 8
+                            }, {
+                                name: "单身率",
+                                value: 6
+                            }]
+                        }, ];
+
+                        /*获取地图数据*/
+                        myChart.showLoading();
+                        var mapFeatures = echarts.getMap(mapName).geoJson.features;
+                        myChart.hideLoading();
+                        mapFeatures.forEach(function(v) {
+                            // 地区名称
+                            var name = v.properties.name;
+                            // 地区经纬度
+                            geoCoordMap[name] = v.properties.cp;
+
+                        });
+
+                        // console.log("============geoCoordMap===================")
+                        // console.log(geoCoordMap)
+                        // console.log("================data======================")
+                        console.log(data)
+                        console.log(toolTipData)
+                        var max = 480,
+                            min = 9; // todo 
+                        var maxSize4Pin = 100,
+                            minSize4Pin = 20;
+
+                        var convertData = function(data) {
+                            var res = [];
+                            for (var i = 0; i < data.length; i++) {
+                                var geoCoord = geoCoordMap[data[i].name];
+                                if (geoCoord) {
+                                    res.push({
+                                        name: data[i].name,
+                                        value: geoCoord.concat(data[i].value),
+                                    });
+                                }
+                            }
+                            return res;
+                        };
+                        option = {
+                            title: {
+                                text: name_title,
+                                subtext: subname,
+                                x: 'center',
+
+                                textStyle: {
+                                    color: nameColor,
+                                    fontFamily: name_fontFamily,
+                                    fontSize: name_fontSize,
+
+                                },
+                                subtextStyle: {
+                                    fontSize: subname_fontSize,
+                                    fontFamily: name_fontFamily
+                                }
+                            },
+                            tooltip: {
+                                trigger: 'item',
+                                formatter: function(params) {
+                                    if (typeof(params.value)[2] == "undefined") {
+                                        var toolTiphtml = ''
+                                        for (var i = 0; i < toolTipData.length; i++) {
+                                            if (params.name == toolTipData[i].name) {
+                                                toolTiphtml += toolTipData[i].name + ':<br>'
+                                                for (var j = 0; j < toolTipData[i].value.length; j++) {
+                                                    toolTiphtml += toolTipData[i].value[j].name + ':' + toolTipData[i].value[j].value + "<br>"
+                                                }
+                                            }
+                                        }
+                                        console.log(toolTiphtml)
+                                            // console.log(convertData(data))
+                                        return toolTiphtml;
+                                    } else {
+                                        var toolTiphtml = ''
+                                        for (var i = 0; i < toolTipData.length; i++) {
+                                            if (params.name == toolTipData[i].name) {
+                                                toolTiphtml += toolTipData[i].name + ':<br>'
+                                                for (var j = 0; j < toolTipData[i].value.length; j++) {
+                                                    toolTiphtml += toolTipData[i].value[j].name + ':' + toolTipData[i].value[j].value + "<br>"
+                                                }
+                                            }
+                                        }
+                                        console.log(toolTiphtml)
+                                            // console.log(convertData(data))
+                                        return toolTiphtml;
+                                    }
+                                }
+                            },
+                            // legend: {
+                            //     orient: 'vertical',
+                            //     y: 'bottom',
+                            //     x: 'right',
+                            //     data: ['credit_pm2.5'],
+                            //     textStyle: {
+                            //         color: '#fff'
+                            //     }
+                            // },
+                            visualMap: {
+                                show: false,
+                                min: 0,
+                                max: 200,
+                                left: 'left',
+                                top: 'bottom',
+                                text: ['高', '低'], // 文本，默认为数值文本
+                                calculable: false,
+                                seriesIndex: [1],
+                                inRange: {
+                                    color: ['#3B5077', '#031525'] // 蓝黑
+                                        // color: ['#ffc0cb', '#800080'] // 红紫
+                                        //color: ['#3C3B3F', '#605C3C'] // 黑绿
+                                        // color: ['#0f0c29', '#302b63', '#24243e'] // 黑紫黑
+                                        //color: ['#23074d', '#cc5333'] // 紫红
+                                        //color: ['#00467F', '#A5CC82'] // 蓝绿
+                                        //color: ['#1488CC', '#2B32B2'] // 浅蓝
+                                        //color: ['#00467F', '#A5CC82'] // 蓝绿
+                                        //color: ['#00467F', '#A5CC82'] // 蓝绿
+                                        // color: ['#00467F', '#A5CC82'] // 蓝绿
+                                        //color: ['#00467F', '#A5CC82'] // 蓝绿
+                                }
+                            },
+                            /*工具按钮组*/
+                            // toolbox: {
+                            //     show: true,
+                            //     orient: 'vertical',
+                            //     left: 'right',
+                            //     top: 'center',
+                            //     feature: {
+                            //         dataView: {
+                            //             readOnly: false
+                            //         },
+                            //         restore: {},
+                            //         saveAsImage: {}
+                            //     }
+                            // },
+                            geo: {
+                                show: true,
+                                map: mapName,
+                                label: {
+                                    normal: {
+                                        show: false
+                                    },
+                                    emphasis: {
+                                        show: false,
+                                    }
+                                },
+                                roam: true,
+                                itemStyle: {
+                                    normal: {
+                                        areaColor: '#031525',
+                                        borderColor: '#3B5077',
+                                    },
+                                    emphasis: {
+                                        areaColor: '#2B91B7',
+                                    }
+                                }
+                            },
+                            series: [{
+                                    name: '散点',
+                                    type: 'scatter',
+                                    coordinateSystem: 'geo',
+                                    data: convertData(data),
+                                    symbolSize: function(val) {
+                                        return val[2] / 10;
+                                    },
+                                    label: {
+                                        normal: {
+                                            formatter: '{b}',
+                                            position: 'right',
+                                            show: true
+                                        },
+                                        emphasis: {
+                                            show: true
+                                        }
+                                    },
+                                    itemStyle: {
+                                        normal: {
+                                            color: '#05C3F9'
+                                        }
+                                    }
+                                }, {
+                                    type: 'map',
+                                    map: mapName,
+                                    geoIndex: 0,
+                                    aspectScale: 0.75, //长宽比
+                                    showLegendSymbol: false, // 存在legend时显示
+                                    label: {
+                                        normal: {
+                                            show: true
+                                        },
+                                        emphasis: {
+                                            show: false,
+                                            textStyle: {
+                                                color: '#fff'
+                                            }
+                                        }
+                                    },
+                                    roam: true,
+                                    itemStyle: {
+                                        normal: {
+                                            areaColor: '#031525',
+                                            borderColor: '#3B5077',
+                                        },
+                                        emphasis: {
+                                            areaColor: '#2B91B7'
+                                        }
+                                    },
+                                    animation: false,
+                                    data: data
+                                }, {
+                                    name: '点',
+                                    type: 'scatter',
+                                    coordinateSystem: 'geo',
+                                    symbol: 'pin', //气泡
+                                    symbolSize: function(val) {
+                                        var a = (maxSize4Pin - minSize4Pin) / (max - min);
+                                        var b = minSize4Pin - a * min;
+                                        b = maxSize4Pin - a * max;
+                                        return a * val[2] + b;
+                                    },
+                                    label: {
+                                        normal: {
+                                            show: false,
+                                            textStyle: {
+                                                color: '#fff',
+                                                fontSize: 9,
+                                            }
+                                        }
+                                    },
+                                    itemStyle: {
+                                        normal: {
+                                            color: '#F62157', //标志颜色
+                                        }
+                                    },
+                                    zlevel: 6,
+                                    data: convertData(data),
+                                }, {
+                                    name: 'Top 5',
+                                    type: 'effectScatter',
+                                    coordinateSystem: 'geo',
+                                    data: convertData(data.sort(function(a, b) {
+                                        return b.value - a.value;
+                                    }).slice(0, 5)),
+                                    symbolSize: function(val) {
+                                        return val[2] / 10;
+                                    },
+                                    showEffectOn: 'render',
+                                    rippleEffect: {
+                                        brushType: 'stroke'
+                                    },
+                                    hoverAnimation: true,
+                                    label: {
+                                        normal: {
+                                            formatter: '{b}',
+                                            position: 'right',
+                                            show: true
+                                        }
+                                    },
+                                    itemStyle: {
+                                        normal: {
+                                            color: 'yellow',
+                                            shadowBlur: 10,
+                                            shadowColor: 'yellow'
+                                        }
+                                    },
+                                    zlevel: 1
+                                },
+
+                            ]
+                        };
+                        myChart.setOption(option);
+                    </script>
+                    <div class="laiyuan"> 数据来源：国家统计局、中国关心下一代工作委员会健康体育发展中心 采集时间：2016年
+                    </div>
+                </div>
+            </div>
+        </center>
+
+        <center>
+            <div class="word">
+                <p style="font-size:16px">由图中可看出，逼婚实则是一个普遍现象，在中国，逼婚率最低的辽宁、江苏、浙江也有74%，而逼婚率最高的省份——河南则达到了89%。另外逼婚率高低与否也与单身率相关，单身率相对高的河南、陕西、山东、广州，逼婚率也都在80%以上。</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <h2 style="height:20px; text-align:center;"><b>--父母眼中的相亲鄙视链--</b></h2>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p style="font-size:16px">
+                    在这个时代，父母的“逼婚”行为仿佛是一个声音在说“单身有罪，结婚无罪”。到了那个年龄却还单身的人就像商品一样被摆上货架，要在最好的时间将自己推销出去，否则过了一段时间又有新的商品上架，“老”商品也就错失了最佳的竞争时期。而“相亲角”就演变为父母为了“推销”儿女的市场。 近年来，在北上广的各大相亲角里，相亲男女所具备的条件直接被明码标价，甚至有媒体总结出了一条“中国式相亲鄙视链”。户籍、房车、学籍、收入成为相亲“四大金刚”，同等级只和同等级对话，在底层的压根没有话语权。于是各种条条框框也就在“相亲角”中应运而生，诞生出了一条在父母眼中的相亲鄙视链。
+
+                </p>
+            </div>
+        </center>
+
+        <div style="height:30px; font-size:16px; text-align:center; margin:40px;"><b>首都“相亲角”背后的价目表</b></div>
+        <div class="ag-content-customer-wrap">
+            <div class="ag-content-customer">
+                <div class="ag-content-customer-ele">
+                    <div class="ag-content-customer-ele-shadow"></div>
+                    <span>顶配</span>
+                    <img src="images/顶配.png" data-hover="77" data-normal="85" />
+                </div>
+                <div class="ag-content-customer-ele">
+                    <div class="ag-content-customer-ele-shadow"></div>
+                    <span>高配</span>
+                    <img src="images/高配.png" style="left:65px;" data-hover="57" data-normal="65" />
+                </div>
+                <div class="ag-content-customer-ele">
+                    <div class="ag-content-customer-ele-shadow"></div>
+                    <span>标配</span>
+                    <img src="images/标配.png" style="left:96px;" data-hover="88" data-normal="96" />
+                </div>
+                <div class="ag-content-customer-ele">
+                    <div class="ag-content-customer-ele-shadow"></div>
+                    <span>低配</span>
+                    <img src="images/低配.png" style="left:83px;" data-hover="75" data-normal="83" />
+                </div>
+                <div class="ag-content-customer-ele">
+                    <div class="ag-content-customer-ele-shadow"></div>
+                    <span>简配</span>
+                    <img src="images/简配.png" style="left:56px;" data-hover="48" data-normal="56" />
+                </div>
+                <div class="ag-content-customer-ele">
+                    <div class="ag-content-customer-ele-shadow"></div>
+                    <span>不考虑</span>
+                    <img src="images/不考虑.png" style="left:83px;" data-hover="75" data-normal="83" />
+                </div>
+                <div class="ag-content-customer-ele-detail">
+                    <ul>
+                        <li class="acced-li-1"></li>
+                        <li class="acced-li-2"></li>
+                        <li class="acced-li-3"></li>
+                        <li class="acced-li-4"></li>
+                        <li class="acced-li-5"></li>
+                        <li class="acced-li-6"></li>
+                    </ul>
+                    <div class="ag-content-customer-ele-detail-display">
+                        <div class="ag-content-customer-ele-detail-display-left">
+                            <img src="images/顶配.png" />
+                        </div>
+                        <div class="ag-content-customer-ele-detail-display-right">
+                            <span style="top:27px; left:0px; text-align:right;"><img src="images/man1.png"/></span>
+                            <span class="point" style="top:88px; right:158px;">></span>
+                            <a href="#" class="agwm" style="top:40px; right:0px;">AG网盟</a>
+                            <span style="top:235px; left:0px; text-align:right;"><img src="images/woman1.png" /></span>
+                            <span class="point" style="top:262px; right:158px;">></span>
+                            <a href="#" class="aggg" style="top:210px; right:0px;">AG广告效果分析平台</a>
+                        </div>
+                    </div>
+
+                    <div class="ag-content-customer-ele-detail-display">
+                        <div class="ag-content-customer-ele-detail-display-left">
+                            <img src="images/高配.png" />
+                        </div>
+                        <div class="ag-content-customer-ele-detail-display-right">
+                            <span style="top:27px; left:0px; text-align:right;"><img src="images/man2.png" /></span>
+                            <span class="point" style="top:88px; right:158px;">></span>
+                            <a href="#" class="agwm" style="top:40px; right:0px;">AG网盟</a>
+                            <span style="top:235px; left:0px; text-align:right;"><img src="images/woman2.png" /></span>
+                            <span class="point" style="top:262px; right:158px;">></span>
+                            <a href="#" class="aggg" style="top:210px; right:0px;">AG广告效果分析平台</a>
+                        </div>
+                    </div>
+
+                    <div class="ag-content-customer-ele-detail-display">
+                        <div class="ag-content-customer-ele-detail-display-left">
+                            <img src="images/标配.png" />
+                        </div>
+                        <div class="ag-content-customer-ele-detail-display-right">
+                            <span style="top:27px; left:0px; text-align:right;"><img src="images/man3.png" /></span>
+                            <span class="point" style="top:88px; right:158px;">></span>
+                            <a href="#" class="agwm" style="top:40px; right:0px;">AG网盟</a>
+                            <span style="top:235px; left:5px; text-align:right;"><img src="images/woman3.png" /></span>
+                            <span class="point" style="top:262px; right:158px;">></span>
+                            <a href="#" class="aggg" style="top:210px; right:0px;">AG广告效果分析平台</a>
+                        </div>
+                    </div>
+
+                    <div class="ag-content-customer-ele-detail-display">
+                        <div class="ag-content-customer-ele-detail-display-left">
+                            <img src="images/低配.png" />
+                        </div>
+                        <div class="ag-content-customer-ele-detail-display-right">
+                            <span style="top:27px; left:0px; text-align:right;"><img src="images/man4.png" /></span>
+                            <span class="point" style="top:88px; right:158px;">></span>
+                            <a href="#" class="agwm" style="top:40px; right:0px;">AG网盟</a>
+                            <span style="top:235px; left:-5px; text-align:right;"><img src="images/woman4.png" /></span>
+                            <span class="point" style="top:262px; right:158px;">></span>
+                            <a href="#" class="aggg" style="top:210px; right:0px;">AG广告效果分析平台</a>
+                        </div>
+                    </div>
+
+                    <div class="ag-content-customer-ele-detail-display">
+                        <div class="ag-content-customer-ele-detail-display-left">
+                            <img src="images/简配.png" />
+                        </div>
+                        <div class="ag-content-customer-ele-detail-display-right">
+                            <span style="top:27px; left:0px; text-align:right;"><img src="images/man5.png" /></span>
+                            <span class="point" style="top:88px; right:158px;">></span>
+                            <a href="#" class="agwm" style="top:40px; right:0px;">AG网盟</a>
+                            <span style="top:235px; left:0px; text-align:right;"><img src="images/woman5.png" /></span>
+                            <span class="point" style="top:262px; right:158px;">></span>
+                            <a href="#" class="aggg" style="top:210px; right:0px;">AG广告效果分析平台</a>
+                        </div>
+                    </div>
+
+                    <div class="ag-content-customer-ele-detail-display">
+                        <div class="ag-content-customer-ele-detail-display-left">
+                            <img src="images/不考虑.png" />
+                        </div>
+                        <div class="ag-content-customer-ele-detail-display-right">
+                            <span style="top:27px; left:0px; text-align:right;"><img src="images/man6.png" /></span>
+                            <span class="point" style="top:88px; right:158px;">></span>
+                            <a href="#" class="agwm" style="top:40px; right:0px;">AG网盟</a>
+                            <span style="top:225px; left:0px; text-align:right;"><img src="images/woman6.png" /></span>
+                            <span class="point" style="top:262px; right:158px;">></span>
+                            <a href="#" class="aggg" style="top:210px; right:0px;">AG广告效果分析平台</a>
+                        </div>
+                    </div>
+
+                    <div class="ag-content-customer-ele-detail-return"><span style="color:#FFF"><</span>返回</div>
+                </div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                $(".ag-content-customer-ele").bind("mouseenter mouseleave", function(e) {
+                    var w = $(this).width();
+                    var h = $(this).height();
+                    var x = (e.pageX - this.offsetLeft - (w / 2)) * (w > h ? (h / w) : 1);
+                    var y = (e.pageY - this.offsetTop - (h / 2)) * (h > w ? (w / h) : 1);
+                    var direction = Math.round((((Math.atan2(y, x) * (180 / Math.PI)) + 180) / 90) + 3) % 4;
+                    if (e.type == 'mouseenter') {
+                        // 0:up - 1:right - 2:down - 3:left
+                        if (direction == 0) {
+                            $(this).find('div').css({
+                                'top': '-470px',
+                                'left': '0px'
+                            });
+                            $(this).find('div').animate({
+                                'top': 0
+                            }, {
+                                queue: false,
+                                duration: 300
+                            });
+                        } else if (direction == 2) {
+                            $(this).find('div').css({
+                                'top': '470px',
+                                'left': '0px'
+                            });
+                            $(this).find('div').animate({
+                                'top': 0
+                            }, {
+                                queue: false,
+                                duration: 300
+                            });
+                        } else if (direction == 1) {
+                            $(this).find('div').css({
+                                'top': '0px',
+                                'left': '167px'
+                            });
+                            $(this).find('div').animate({
+                                'left': 0
+                            }, {
+                                queue: false,
+                                duration: 300
+                            });
+                        } else if (direction == 3) {
+                            $(this).find('div').css({
+                                'top': '0px',
+                                'left': '-167px'
+                            });
+                            $(this).find('div').animate({
+                                'left': 0
+                            }, {
+                                queue: false,
+                                duration: 300
+                            });
+                        }
+                        $(this).find('span').css('color', '#fff');
+                        $(this).find('img').animate({
+                            'left': $(this).find('img').attr('data-hover')
+                        }, {
+                            queue: false,
+                            duration: 200
+                        });
+                    } else {
+                        if (direction == 0) {
+                            $(this).find('div').animate({
+                                'top': -470
+                            }, {
+                                queue: false,
+                                duration: 300
+                            });
+                        } else if (direction == 2) {
+                            $(this).find('div').animate({
+                                'top': 470
+                            }, {
+                                queue: false,
+                                duration: 300
+                            });
+                        } else if (direction == 1) {
+                            $(this).find('div').animate({
+                                'left': 167
+                            }, {
+                                queue: false,
+                                duration: 300
+                            });
+                        } else if (direction == 3) {
+                            $(this).find('div').animate({
+                                'left': -167
+                            }, {
+                                queue: false,
+                                duration: 300
+                            });
+                        }
+                        $(this).find('span').css('color', '#262626');
+                        $(this).find('img').animate({
+                            'left': $(this).find('img').attr('data-normal')
+                        }, {
+                            queue: false,
+                            duration: 200
+                        });
+                    }
+                });
+
+                $(".ag-content-customer-ele").bind('click', function(e) {
+
+                    var navIndex = $(e.target).parent().index();
+                    $('.ag-content-customer-ele-detail ul li').removeClass('current');
+                    $('.ag-content-customer-ele-detail ul li').eq(navIndex).addClass('current');
+
+                    $('.ag-content-customer-wrap').css('background-color', '#469acb');
+                    $('.ag-content-customer-ele').animate({
+                        'width': 0
+                    }, 500);
+
+                    $('.ag-content-customer-ele-detail').animate({
+                        'width': 1002
+                    }, {
+                        duration: 500,
+                        complete: function() {
+                            $('.ag-content-customer-ele-detail ul li').eq(navIndex).click();
+                        }
+                    });
+                });
+
+                $('.ag-content-customer-ele-detail-return').bind('click', function(e) {
+
+                    $('.ag-content-customer-wrap').css('background-color', '#f1f1f1');
+                    $('.ag-content-customer-ele-detail').css('overflow', 'hidden');
+                    $('.ag-content-customer-ele').animate({
+                        'width': 167
+                    }, 500);
+                    $('.ag-content-customer-ele-detail').animate({
+                        'width': 0
+                    }, 500);
+                    $('.ag-content-customer-ele-detail-display').hide();
+                });
+
+                $('.ag-content-customer-ele-detail ul li').bind('click', function() {
+
+                    $('.ag-content-customer-ele-detail ul li').removeClass('current');
+                    $(this).addClass('current');
+                    $('.ag-content-customer-ele-detail').css('overflow', 'visible');
+
+                    var disIndex = $(this).index();
+                    $('.ag-content-customer-ele-detail-display').hide();
+                    $('.ag-content-customer-ele-detail-display').eq(disIndex).show();
+
+                    // IE
+                    if ("ActiveXObject" in window) {
+                        $('.ag-content-customer-ele-detail-display-left').css({
+                            'left': '0px',
+                            'opacity': '1'
+                        });
+                        $('.ag-content-customer-ele-detail-display-right').css({
+                            'right': '-120px',
+                            'opacity': '1'
+                        });
+                        $('.ag-content-customer-ele-detail-display-left').eq(disIndex).animate({
+                            'left': 120
+                        }, {
+                            duration: 1000,
+                            easing: 'easeOutQuint'
+                        });
+                        $('.ag-content-customer-ele-detail-display-right').eq(disIndex).animate({
+                            'right': 0
+                        }, {
+                            duration: 1000,
+                            easing: 'easeOutQuint'
+                        });
+                    }
+                });
+
+            });
+        </script>
+
+        <script type="text/javascript" src="js/jquery.easing.js"></script>
+
+        <center>
+            <div class="word">
+                <p style="font-size:16px">
+                    可见，以北京为例，相亲鄙视链为：本地的瞧不上外地的，有房有车的瞧不上没房没车的，有钱的瞧不上没钱的。也许爱情并不是这些条件就能够定位的，也并不是满足了这些条件就能够结婚，但是对于着急为孩子相亲的父母来说，条件是他们能够物色出候选人的最快方式，而只有快，才能帮助他们的孩子早日脱单。只不过这样“求快”的方式，在孩子们眼中就变成了“逼婚”。
+                </p>
+                <p>&nbsp;&nbsp;</p>
+                <p>&nbsp;</p>
+                <h2 style="height:20px; text-align:center;"><b>--寻找婚姻话语权的青年群体--</b></h2>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p style="font-size:16px">
+                    其实“逼婚”本质来源于父母的关心，这样的关心无可厚非，可是关心越多，对于年轻的单身群体来说压力也就越大，有人在这样的压力下选择妥协，配合父母筹备自己的终身大事；也有人被触动了反叛神经，在“知乎”、“豆瓣”、“贴吧”这类以年轻人为主的网络平台上发出“反逼婚”的声音。
+                </p>
+            </div>
+        </center>
+
+        <center>
+            <div class="container">
+                <div class="box2">
+                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                    <div id="4main" style="width: 700px;height:500px;"></div>
+                    <script type="text/javascript">
+                        // 基于准备好的dom，初始化echarts实例
+                        var myChart = echarts.init(document.getElementById('4main'));
+
+                        // 指定图表的配置项和数据
+                        var option = {
+                            title: {
+                                text: '豆瓣、知乎、贴吧三大平台逼婚帖数变化图',
+                                left: 'center',
+                                subtext: ''
+                            },
+                            tooltip: {
+                                trigger: 'axis'
+                            },
+                            grid: {
+                                left: '3%',
+                                top: '15%',
+                                containLabel: true
+                            },
+                            legend: {
+                                top: '50px',
+                                data: ['豆瓣', '贴吧', '知乎', '加总']
+                            },
+                            calculable: true,
+                            xAxis: [{
+                                type: 'category',
+                                boundaryGap: false,
+                                data: ['2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018']
+                            }],
+                            yAxis: {
+                                type: 'value'
+                            },
+                            series: [{
+                                name: '豆瓣',
+                                type: 'line',
+                                areaStyle: {
+                                    normal: {
+                                        type: 'default',
+                                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                            offset: 0,
+                                            color: 'rgba(199, 37, 50,0.2)'
+                                        }, {
+                                            offset: 1,
+                                            color: 'rgba(199, 37, 50,0.2)'
+                                        }], false)
+                                    }
+                                },
+                                smooth: true,
+                                itemStyle: {
+                                    normal: {
+                                        areaStyle: {
+                                            type: 'default'
+                                        }
+                                    }
+                                },
+                                data: [20, 119, 208, 337, 316, 460, 368, 198]
+                            }, {
+                                name: '贴吧',
+                                type: 'line',
+                                areaStyle: {
+                                    normal: {
+                                        type: 'default',
+                                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                            offset: 0,
+                                            color: 'rgba(19, 37, 250,0.2)'
+                                        }, {
+                                            offset: 1,
+                                            color: 'rgba(19, 37, 250,0.2)'
+                                        }], false)
+                                    }
+                                },
+                                smooth: true,
+                                itemStyle: {
+                                    normal: {
+                                        areaStyle: {
+                                            type: 'default'
+                                        }
+                                    }
+                                },
+                                data: [45, 197, 45, 513, 356, 516, 447, 609]
+                            }, {
+                                name: '知乎',
+                                type: 'line',
+                                areaStyle: {
+                                    normal: {
+                                        type: 'default',
+                                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                            offset: 0,
+                                            color: 'rgba(19, 37, 250,0.2)'
+                                        }, {
+                                            offset: 1,
+                                            color: 'rgba(19, 37, 250,0.2)'
+                                        }], false)
+                                    }
+                                },
+                                smooth: true,
+                                itemStyle: {
+                                    normal: {
+                                        areaStyle: {
+                                            type: 'default'
+                                        }
+                                    }
+                                },
+                                data: [97, 79, 71, 88, 177, 150, 62, 132]
+                            }, {
+                                name: '加总',
+                                type: 'line',
+                                areaStyle: {
+                                    normal: {
+                                        type: 'default',
+                                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                            offset: 0,
+                                            color: 'rgba(19, 37, 250,0.2)'
+                                        }, {
+                                            offset: 1,
+                                            color: 'rgba(19, 37, 250,0.2)'
+                                        }], false)
+                                    }
+                                },
+                                smooth: true,
+                                itemStyle: {
+                                    normal: {
+                                        areaStyle: {
+                                            type: 'default'
+                                        }
+                                    }
+                                },
+                                data: [162, 395, 324, 938, 849, 1126, 877, 939]
+                            }, ]
+                        };
+                        myChart.setOption(option);
+                    </script>
+                    <div class="laiyuan"> 数据来源：对豆瓣、知乎、贴吧三大平台利用工具进行数据抓取 采集时间：2018.05.26—2018.05.29
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </center>
+
+        <center>
+            <div class="word">
+                <p style="font-size:16px">
+                    “豆瓣”、“知乎”、“贴吧”是当下年轻人的网络平台聚集地，随着年份不断变化，关于“逼婚”话题的总数量在这三个平台上呈现整体上升的趋势，其中以“贴吧”的波动最为明显，从2013年开始，贴吧关于“逼婚”话题的帖子就急速上升，反超豆瓣、知乎数量，截止到2018年5月达到最高值，可见贴吧关于该话题的热度在今年又创新高。而豆瓣对于该话题的关注从2011-2016年一直呈现上升趋势，直到2017年逐渐下降。对于知乎来说，对于该话题的关注一直趋于稳定。
+                </p>
+                <p>&nbsp;&nbsp;</p>
+                <p style="font-size:16px">
+                    三个平台对于该话题的关注数量不尽相同可能是因为不同平台的用户数量本就有差别，但将这些数据加总我们还是可以看出，当下年轻人对于“逼婚”话题的关注整体持续上升。虽然在2017年在这三个平台上的话题数略微下降，不过在2018年话题数又反弹，截止到2018年5月，逼婚话题数已经超过2017年的数量。
+                </p>
+                <p>&nbsp;&nbsp;</p>
+                <p style="font-size:16px">
+                    随着“反逼婚”的情势愈演愈烈，在这些网络平台上，对于婚恋的负面态度也开始逐渐增长。
+                </p>
+            </div>
+        </center>
+
+        <center>
+            <div class="container">
+                <div class="box2">
+                    <div class="chartbox">
+                        <p style="font-size:16px; text-indent:50px;"><b>2012-2017三大互联网平台婚恋消极情感话题数量</b></p>
+                        <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                        <div id="5main" style="width: 700px;height:500px;"></div>
+                        <script type="text/javascript">
+                            // 基于准备好的dom，初始化echarts实例
+                            var myChart = echarts.init(document.getElementById('5main'));
+
+                            // 指定图表的配置项和数据                var myChart = echarts.init(document.getElementById('2main'));
+
+                            // 指定图表的配置项和数据
+                            var option = {
+                                angleAxis: {},
+                                radiusAxis: {
+                                    type: 'category',
+                                    data: ['2012', '2013', '2014', '2015', '2016', '2017'],
+                                    z: 10
+                                },
+                                polar: {},
+                                series: [{
+                                    type: 'bar',
+                                    data: [7, 19, 73, 361, 123, 263],
+                                    coordinateSystem: 'polar',
+                                    name: '知乎',
+                                    stack: 'a'
+                                }, {
+                                    type: 'bar',
+                                    data: [229, 318, 463, 263, 542, 767],
+                                    coordinateSystem: 'polar',
+                                    name: '豆瓣',
+                                    stack: 'a'
+                                }, {
+                                    type: 'bar',
+                                    data: [236, 337, 536, 624, 665, 1030],
+                                    coordinateSystem: 'polar',
+                                    name: '贴吧',
+                                    stack: 'a'
+                                }],
+                                legend: {
+                                    show: true,
+                                    data: ['知乎', '豆瓣', '贴吧']
+                                }
+                            };
+
+
+                            // 使用刚指定的配置项和数据显示图表。
+                            myChart.setOption(option);
+                        </script>
+                        <div class="laiyuan"> 数据来源：对豆瓣、知乎、贴吧三大平台利用工具进行数据抓取 采集时间：2018.05.26—2018.05.29
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </center>
+
+        <center>
+            <div class="word">
+                <p style="font-size:16px">
+                    我们利用爬虫工具，对豆瓣、知乎、贴吧话题中关于婚恋的部分进行语义分析，发现随着时间变化，这些平台的受众对于“婚恋”的负面态度不断升高。在2012-2017年中，以贴吧的负面情感增长最多，其次为豆瓣，最后为知乎。
+                </p>
+            </div>
+        </center>
+
+        <center>
+            <div class="container">
+                <div class="box2">
+                    <p style="font-size:16px; text-indent:50px;"><b>2012-2017三大互联网平台关于“结婚”与“相亲”负面情感态度变化</b></p>
+                    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                    <div id="6main" style="width: 700px;height:500px;"></div>
+                    <script type="text/javascript">
+                        // 基于准备好的dom，初始化echarts实例
+                        var myChart = echarts.init(document.getElementById('6main'));
+
+                        // 指定图表的配置项和数据                var myChart = echarts.init(document.getElementById('2main'));
+
+                        // 指定图表的配置项和数据
+
+                        //------------------------------------引用请注明出处
+
+                        var pathSymbols = {
+
+                        };
+
+                        var labelSetting = {
+                            normal: {
+                                show: true,
+                                position: 'right',
+                                offset: [10, 0],
+                                textStyle: {
+                                    fontSize: 16
+                                }
+                            }
+                        };
+
+
+                        var option = {
+                            title: {
+
+                            },
+                            legend: {
+                                data: ['相亲', '结婚']
+                            },
+                            tooltip: {
+                                trigger: 'axis',
+                                axisPointer: {
+                                    type: 'shadow'
+                                }
+                            },
+                            grid: {
+                                containLabel: true,
+                                left: 20
+                            },
+                            yAxis: {
+                                data: ['2012', '2013', '2014', '2015', '2016', '2017'],
+                                inverse: true,
+                                axisLine: {
+                                    show: false
+                                },
+                                axisTick: {
+                                    show: false
+                                },
+                                axisLabel: {
+                                    margin: 30,
+                                    textStyle: {
+                                        fontSize: 14
+                                    }
+                                },
+                                axisPointer: {
+                                    label: {
+                                        show: true,
+                                        margin: 30
+                                    }
+                                }
+                            },
+                            xAxis: {
+                                splitLine: {
+                                    show: false
+                                },
+                                axisLabel: {
+                                    show: false
+                                },
+                                axisTick: {
+                                    show: false
+                                },
+                                axisLine: {
+                                    show: false
+                                }
+                            },
+                            series: [{
+                                name: '相亲',
+                                type: 'pictorialBar',
+                                label: labelSetting,
+                                symbolRepeat: true,
+                                symbolSize: ['80%', '60%'],
+                                barCategoryGap: '40%',
+                                data: [{
+                                    value: 10,
+                                    symbol: pathSymbols.reindeer
+                                }, {
+                                    value: 36,
+                                    symbol: pathSymbols.ship
+                                }, {
+                                    value: 130,
+                                    symbol: pathSymbols.plane
+                                }, {
+                                    value: 656,
+                                    symbol: pathSymbols.train
+                                }, {
+                                    value: 188,
+                                    symbol: pathSymbols.car
+                                }, {
+                                    value: 410,
+                                    symbol: pathSymbols.car
+                                }]
+                            }, {
+                                name: '结婚',
+                                type: 'pictorialBar',
+                                barGap: '10%',
+                                label: labelSetting,
+                                symbolRepeat: true,
+                                symbolSize: ['80%', '60%'],
+                                data: [{
+                                    value: 462,
+                                    symbol: pathSymbols.reindeer
+                                }, {
+                                    value: 638,
+                                    symbol: pathSymbols.ship
+                                }, {
+                                    value: 942,
+                                    symbol: pathSymbols.plane
+                                }, {
+                                    value: 592,
+                                    symbol: pathSymbols.train
+                                }, {
+                                    value: 1142,
+                                    symbol: pathSymbols.car
+                                }, {
+                                    value: 1650,
+                                    symbol: pathSymbols.car
+                                }]
+                            }]
+                        };
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption(option);
+                    </script>
+                    <div class="laiyuan"> 数据来源：这里的情感倾向分析以“结婚”、“相亲”为关键词进行搜索，通过selenium模块调用浏览器，并实现网页源码的收集，采用re模块的正则表达式分离数据。此次爬虫采集的数据仅包含话题主题，不包含评论与回复。&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 数据采集时间：2018.05.26—2018.05.29
+                    </div>
+                </div>
+            </div>
+            </div>
+            </div>
+        </center>
+
+        <center>
+            <div class="word">
+                <p style="font-size:16px">
+                    <p style="font-size:16px">
+                        如果进一步对“婚恋”话题细化，分析在这些话题中，关于“结婚”和“相亲”的负面情感，可以看出，这三个平台对于这两个话题的负面情感数量总体增多的。其中对于“结婚”的负面情感数量变化较大，在2017年达到最多。但是对于“相亲”的负面情感数量呈现波动状态，在2015年负面情感数量达到高峰后，2016年随即降低，之后就继续反弹，可见相亲对于这些受众来说负面情感并没有太强烈的变化。
+                    </p>
+                </p>
+                <p>&nbsp;&nbsp;</p>
+                <p style="font-size:16px">
+                    虽说是“反逼婚”，但不意味着“不结婚”，虽然越来越多人加入“反逼婚”小组，但是这些群组却不是劝别人不要顺便结婚的群，相反更多人都在群里表示想谈恋爱，求对象。
+                </p>
+            </div>
+        </center>
+
+        <center>
+            <div style="height:20px; font-size:16px; text-align:center;margin:10px;"><b>三大平台情感倾向总对比</b></div>
+            <div class="emotion" style="width:700px;height: 400px;">
+                <div id="container" style="width:700px;height: 400px;"></div>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+                <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+                <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+                <script type="text/javascript">
+                    var dom = document.getElementById("container");
+                    var myChart = echarts.init(dom);
+                    var app = {};
+                    option = null;
+                    app.title = '正负条形图';
+
+                    option = {
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+                            }
+                        },
+                        legend: {
+                            data: ['利润', '负面情感词词数', '正面情感词词数']
+                        },
+                        grid: {
+                            left: '3%',
+                            right: '4%',
+                            bottom: '3%',
+                            containLabel: true
+                        },
+                        xAxis: [{
+                            type: 'value'
+                        }],
+                        yAxis: [{
+                            type: 'category',
+                            axisTick: {
+                                show: false
+                            },
+                            data: ['2012', '2013', '2014', '2015', '2016', '2017', '2018']
+                        }],
+                        series: [
+
+                            {
+                                name: '正面情感词词数',
+                                type: 'bar',
+                                stack: '总量',
+                                label: {
+                                    normal: {
+                                        show: true
+                                    }
+                                },
+                                data: [786, 1538, 2412, 1548, 3069, 5856, 4388]
+                            }, {
+                                name: '负面情感词词数',
+                                type: 'bar',
+                                stack: '总量',
+                                label: {
+                                    normal: {
+                                        show: true,
+                                        position: 'left'
+                                    }
+                                },
+                                data: [-472, -674, -1072, -1248, -1330, -2060, -920]
+                            }
+                        ]
+                    };;
+                    if (option && typeof option === "object") {
+                        myChart.setOption(option, true);
+                    }
+                </script>
+                <div class="laiyuan"> 数据来源：这里的情感倾向分析以“结婚”、“相亲”为关键词进行搜索，通过selenium模块调用浏览器，并实现网页源码的收集，采用re模块的正则表达式分离数据。此次爬虫采集的数据仅包含话题主题，不包含评论与回复。&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 数据采集时间：2018.05.26—2018.05.29
+                </div>
+            </div>
+        </center>
+
+        <center>
+            <div class="word">
+                <p style="font-size:16px">
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    当分析豆瓣、知乎、贴吧对于婚恋话题的情感态度，虽然负面情感逐年上升，可是正面情感数量要高于负面情感的数量，且正面情感话题所占比重总体呈现上升趋势。
+                </p>
+                <p>&nbsp;</p>
+                <p style="font-size:16px">
+                    可见，单身群体充满着矛盾，一方面他们也渴望能偶遇上真爱，走进婚姻的殿堂，可又奈何不了因为父母逼迫而带来的焦虑——这些年轻人想结婚又怕辜负期待，不想结婚有敌不过现实的压力。他们通过豆瓣、知乎和贴吧平台来表达自己对于 “逼婚”现象更真实的看法，并试图宣誓自己关于恋爱的主权，从而示威向上一代人的逼婚压力。同时，我们也看到，年轻人在这三大平台上关于恋爱的讨论，也许也是在试图为自己的婚姻幸福找到新的出口。
+                </p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <h2 style="height:20px; text-align:center;"><b>--两代人的成长经历时间线--</b></h2>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p style="font-size:16px">
+                    正如《透明人》中所说，“父母的狭隘显而易见，我们的狭隘却难以自查。”年轻的孩子怪父母不懂得自己的世界，可是孩子们又何尝懂得父母的孤独与无奈呢？那些“逼婚”的父母，多是经历过“知青”、“文革”的那一代，而他们特殊的经历也就带来了与当下自我意识强烈、从小就备受关注的年轻人价值观上的冲突。
+                </p>
+                <p>&nbsp;</p>
+                <p style="font-size:16px">那么，父母和子女和成长过程中的经历是怎样？</p>
+            </div>
+        </center>
+
+        <iframe src="timeline1.html" frameborder='no' border='0' marginwidth='0' marginheight='0' scrolling='no' allowtransparency='yes' width="100%" height="350px"></iframe>
+        <iframe src="timeline2.html" frameborder='no' border='0' marginwidth='0' marginheight='0' scrolling='no' allowtransparency='yes' width="100%" height="350px"></iframe>
+
+        <center>
+            <div class="word">
+                <p style="font-size:16px">
+                    父母出生成长于一个信息相对封闭的环境，很难像他们的子女一样接触到那么多的西方观念和思想，也正因为如此他们的思想才更趋于传统和保守，而这正好与他们儿女的自我与开放形成对比，这也就是为什么他们的价值观常有冲突，也是为什么他们关于结婚这件事常有矛盾。
+                </p>
+                <p>&nbsp;</p>
+                <p style="font-size:16px">
+                    但没有谁比这一代父母更能体会到“被耽误的滋味”，从前“上山下乡”的经历也能让他们体会到条件的重要性，所以，与其说他们的担忧指向婚姻，不如说他们是希望儿女们能够过上“更平稳”、“更不被耽误”的人生。
+                </p>
+                <p>&nbsp;</p>
+                <p style="font-size:16px">
+                    其实单身与结婚都没有原罪，两代人观念的差异也不该成为“逼婚”现象的最终归因。价值观本身并没有对错之分，错的是有效地沟通渠道并没有在子女与父母之间建立，而相互理解或许就在那一瞬间转瞬即逝。
+                </p>
+                <p>&nbsp;</p>
+                <p style="font-size:16px">
+                    年轻人越长大，天地越广阔，而父母的世界却随着年老逐渐囿于“儿女”这个小圈子，也许，婚姻是父母能与儿女在当下这个日新月异的社会中讨论的唯一话题吧。
+                </p>
+            </div>
+        </center>
+
+        <center>
+            <div class="guodu2 " style="background-color:rgb(100, 93, 93) ">
+                <p>&nbsp;</p>
+                <p><span style="font-size:15px ;color:rgb(241, 236, 236);">指导老师：吴小坤</span></p>
+                <p><span style="font-size:15px ;color:rgb(241, 236, 236);">特别感谢：刘文锋</span></p>
+                <p><span style="font-size:15px ;color:rgb(241, 236, 236);">作者团队：贺明静、岳傲南</span></p>
+                <p><span style="font-size:15px ;color:rgb(241, 236, 236);">数据来源：采用数据抓取工具对豆瓣、知乎、贴吧相关内容进行抓取的数据<br>《中国统计年鉴》、《中国人口和就业统计年鉴》、《中国逼婚现状调查报告》</span></p>
+                <p>&nbsp;</p>
+            </div>
+        </center>
+</body>
+
+</html
